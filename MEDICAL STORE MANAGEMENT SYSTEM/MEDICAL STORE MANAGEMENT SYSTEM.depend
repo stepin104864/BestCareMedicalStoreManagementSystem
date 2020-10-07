@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1601965345 source:c:\users\apurva\documents\mini project\medical store management system\unity\unity.c
+	"unity.h"
+	<stddef.h>
+	<avr/pgmspace.h>
+
+1601965412 c:\users\apurva\documents\mini project\medical store management system\unity\unity.h
+	"unity_internals.h"
+
+1601965478 c:\users\apurva\documents\mini project\medical store management system\unity\unity_internals.h
+	"unity_config.h"
+	<setjmp.h>
+	<math.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdint.h>
+	<limits.h>
+	<stdio.h>
+	<stdio.h>
+	<time.h>
+	<time.h>
+
+1602071393 source:c:\users\apurva\documents\mini project\medical store management system\project.c
+	<medicalstoremanagement.h>
+
+1601966428 c:\users\apurva\documents\mini project\medical store management system\inc\medicalstoremanagement.h
+	<stdio.h>
+	<conio.h>
+	<string.h>
+	<ctype.h>
+
+1602071494 source:c:\users\apurva\documents\mini project\medical store management system\src\medicalstoremanagement.c
+	<medicalstoremanagement.h>
+
+1602071496 source:c:\users\apurva\documents\mini project\medical store management system\test\test_medicalstoremanagement.c
+	"unity.h"
+	"medicalstoremanagement.h"
+

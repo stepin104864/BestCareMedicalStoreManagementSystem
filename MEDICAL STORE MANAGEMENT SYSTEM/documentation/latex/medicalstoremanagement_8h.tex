@@ -1,0 +1,144 @@
+\hypertarget{medicalstoremanagement_8h}{}\doxysection{M\+E\+D\+I\+C\+A\+L\+S\+T\+O\+R\+E\+M\+A\+N\+G\+E\+M\+E\+N\+T/inc/medicalstoremanagement.h File Reference}
+\label{medicalstoremanagement_8h}\index{MEDICALSTOREMANGEMENT/inc/medicalstoremanagement.h@{MEDICALSTOREMANGEMENT/inc/medicalstoremanagement.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_medicine}{Medicine}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{medicalstoremanagement_8h_a8f59edefc40e70c4d09e60cd6abfd176}{Purchase\+Medicine}} (int number)
+\item 
+void \mbox{\hyperlink{medicalstoremanagement_8h_ac85008ab5e6eda762b2007246ee2da2a}{Enter\+Info\+About\+Medicine}} (int number)
+\item 
+void \mbox{\hyperlink{medicalstoremanagement_8h_a7c8b23449c3c7becb863585f4808859a}{Know\+Info\+About\+Medicine}} (int number)
+\item 
+void \mbox{\hyperlink{medicalstoremanagement_8h_a1822eab3dd2b3150f687714e352f38ab}{Stock\+Of\+Medicine}} (int number)
+\item 
+void \mbox{\hyperlink{medicalstoremanagement_8h_a3c11344c1df345bc8cf4ce7d2efe785a}{Add\+Medicinein\+Store}} (int number, struct \mbox{\hyperlink{struct_medicine}{Medicine}} m\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{medicalstoremanagement_8h_a28f953aa26cbc8983069cc8d11326010}{Delete\+Medicine\+Store}} (int number)
+\item 
+void \mbox{\hyperlink{medicalstoremanagement_8h_a1ef65d66ea059a9abe3f23d8c1d0e592}{Change\+Medicine\+Details}} (int number)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{medicalstoremanagement_8h_abe130cc91877108bc0fff345ecfb0611}\label{medicalstoremanagement_8h_abe130cc91877108bc0fff345ecfb0611}} 
+struct \mbox{\hyperlink{struct_medicine}{Medicine}} {\bfseries m} \mbox{[}100\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Medical store management system with 7 applications 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{medicalstoremanagement_8h_a3c11344c1df345bc8cf4ce7d2efe785a}\label{medicalstoremanagement_8h_a3c11344c1df345bc8cf4ce7d2efe785a}} 
+\index{medicalstoremanagement.h@{medicalstoremanagement.h}!AddMedicineinStore@{AddMedicineinStore}}
+\index{AddMedicineinStore@{AddMedicineinStore}!medicalstoremanagement.h@{medicalstoremanagement.h}}
+\doxysubsubsection{\texorpdfstring{AddMedicineinStore()}{AddMedicineinStore()}}
+{\footnotesize\ttfamily void Add\+Medicinein\+Store (\begin{DoxyParamCaption}\item[{int}]{number,  }\item[{struct \mbox{\hyperlink{struct_medicine}{Medicine}}}]{m\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+addition of new medicine to the store 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em choice} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em details} & of the medicine to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new medicine information will be added successfully 
+\end{DoxyReturn}
+\mbox{\Hypertarget{medicalstoremanagement_8h_a1ef65d66ea059a9abe3f23d8c1d0e592}\label{medicalstoremanagement_8h_a1ef65d66ea059a9abe3f23d8c1d0e592}} 
+\index{medicalstoremanagement.h@{medicalstoremanagement.h}!ChangeMedicineDetails@{ChangeMedicineDetails}}
+\index{ChangeMedicineDetails@{ChangeMedicineDetails}!medicalstoremanagement.h@{medicalstoremanagement.h}}
+\doxysubsubsection{\texorpdfstring{ChangeMedicineDetails()}{ChangeMedicineDetails()}}
+{\footnotesize\ttfamily void Change\+Medicine\+Details (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+change of medicine details in the store 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em choice} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+details of the medicine will be changed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{medicalstoremanagement_8h_a28f953aa26cbc8983069cc8d11326010}\label{medicalstoremanagement_8h_a28f953aa26cbc8983069cc8d11326010}} 
+\index{medicalstoremanagement.h@{medicalstoremanagement.h}!DeleteMedicineStore@{DeleteMedicineStore}}
+\index{DeleteMedicineStore@{DeleteMedicineStore}!medicalstoremanagement.h@{medicalstoremanagement.h}}
+\doxysubsubsection{\texorpdfstring{DeleteMedicineStore()}{DeleteMedicineStore()}}
+{\footnotesize\ttfamily void Delete\+Medicine\+Store (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+deletion of medicine from the store 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em choice} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+medicine information will be deleted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{medicalstoremanagement_8h_ac85008ab5e6eda762b2007246ee2da2a}\label{medicalstoremanagement_8h_ac85008ab5e6eda762b2007246ee2da2a}} 
+\index{medicalstoremanagement.h@{medicalstoremanagement.h}!EnterInfoAboutMedicine@{EnterInfoAboutMedicine}}
+\index{EnterInfoAboutMedicine@{EnterInfoAboutMedicine}!medicalstoremanagement.h@{medicalstoremanagement.h}}
+\doxysubsubsection{\texorpdfstring{EnterInfoAboutMedicine()}{EnterInfoAboutMedicine()}}
+{\footnotesize\ttfamily void Enter\+Info\+About\+Medicine (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+enter information about the medicine 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em choice} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+information about the medicine will be displayed 
+
+review of the medicine can be added (if any) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{medicalstoremanagement_8h_a7c8b23449c3c7becb863585f4808859a}\label{medicalstoremanagement_8h_a7c8b23449c3c7becb863585f4808859a}} 
+\index{medicalstoremanagement.h@{medicalstoremanagement.h}!KnowInfoAboutMedicine@{KnowInfoAboutMedicine}}
+\index{KnowInfoAboutMedicine@{KnowInfoAboutMedicine}!medicalstoremanagement.h@{medicalstoremanagement.h}}
+\doxysubsubsection{\texorpdfstring{KnowInfoAboutMedicine()}{KnowInfoAboutMedicine()}}
+{\footnotesize\ttfamily void Know\+Info\+About\+Medicine (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+knowing information about the medicine 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em choice} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+information about the medicine will be displayed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{medicalstoremanagement_8h_a8f59edefc40e70c4d09e60cd6abfd176}\label{medicalstoremanagement_8h_a8f59edefc40e70c4d09e60cd6abfd176}} 
+\index{medicalstoremanagement.h@{medicalstoremanagement.h}!PurchaseMedicine@{PurchaseMedicine}}
+\index{PurchaseMedicine@{PurchaseMedicine}!medicalstoremanagement.h@{medicalstoremanagement.h}}
+\doxysubsubsection{\texorpdfstring{PurchaseMedicine()}{PurchaseMedicine()}}
+{\footnotesize\ttfamily void Purchase\+Medicine (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+medicine to be purchased 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em choice} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+details of the medicine to be purchased 
+
+price of the medicine if medicine is to be purchased 
+\end{DoxyReturn}
+\mbox{\Hypertarget{medicalstoremanagement_8h_a1822eab3dd2b3150f687714e352f38ab}\label{medicalstoremanagement_8h_a1822eab3dd2b3150f687714e352f38ab}} 
+\index{medicalstoremanagement.h@{medicalstoremanagement.h}!StockOfMedicine@{StockOfMedicine}}
+\index{StockOfMedicine@{StockOfMedicine}!medicalstoremanagement.h@{medicalstoremanagement.h}}
+\doxysubsubsection{\texorpdfstring{StockOfMedicine()}{StockOfMedicine()}}
+{\footnotesize\ttfamily void Stock\+Of\+Medicine (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+stock of medicine in the store 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em choice} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+information about the stock of medicines in the store will be displayed 
+\end{DoxyReturn}
