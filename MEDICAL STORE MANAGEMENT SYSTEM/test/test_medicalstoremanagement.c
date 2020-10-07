@@ -9,6 +9,7 @@ void tearDown(){}
 void test_PurchaseMedicine(void)
 {
     TEST_ASSERT(PurchaseMedicine(9));
+    TEST_ASSERT(PurchaseMedicine(8));
 }
 
 void test_EnterInfoAboutMedicine(void)
