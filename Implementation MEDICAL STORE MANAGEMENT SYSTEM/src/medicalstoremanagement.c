@@ -1,11 +1,8 @@
 #include<medicalstoremanagement.h>
 
-
-
 //medicine to be purchased Function
  int PurchaseMedicine(int number)
  {
-
   int id,check,i,quantity,flag=0;
   char name[100];
   printf("Enter 1 if you know ID else any other number to enter Name of Medicine\n");
@@ -88,7 +85,8 @@
       {
        printf("Total Price to be paid=%d\n",quantity*m[i].price);
       }
-      else{
+      else
+      {
        printf("Please Enter quantity below Available Quantity\n");
       }
      }
@@ -100,11 +98,9 @@
     printf("Entered Name Not Found\n");
    }
   }
-
  }
 
-
- //about medicine function
+ //information about medicine function
  int EnterInfoAboutMedicine(int number)
  {
   int i,flag=0,c,id;
@@ -139,7 +135,6 @@
      strcat(m[i].info,"; ");
      strcat(m[i].info,info);
     }
-
    }
   }
   if(flag==0)
@@ -148,10 +143,11 @@
   }
  }
 
- // function for knowing the particular medicine
- int KnowInfoAboutMedicine(int number){
+ // function for knowing the information of a  particular medicine
+ int KnowInfoAboutMedicine(int number)
+ {
    int i,flag=0;
-  char name[100];
+   char name[100];
   printf("Enter Name of the medicine you want to see Review and Info\n");
   fflush(stdin);
   gets(name);
@@ -196,7 +192,7 @@
     {
      printf("Review or Info=Not Available\n");
     }
-      }
+    }
    }
   }
   else{
@@ -234,8 +230,6 @@
   printf("Medicine with id %d Added Successfully\n",m[number].id);
  }
 
-
-
  //function for deleting a medicine from store
 int DeleteMedicineStore(int number)
  {
@@ -265,7 +259,6 @@ int DeleteMedicineStore(int number)
    printf("Medicine with %d is Deleted Successfully\n",id);
   }
  }
-
 
  //function for changing any details of medicine
  int ChangeMedicineDetails(int number)
@@ -352,9 +345,7 @@ int DeleteMedicineStore(int number)
         fflush(stdin);
         scanf("%d",&c);
     }while(c==1);
-
     break;
    }
   }
-
  }

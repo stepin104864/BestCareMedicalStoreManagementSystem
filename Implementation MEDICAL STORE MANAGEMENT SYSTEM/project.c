@@ -108,20 +108,19 @@ int test_main();
    strcpy(m[9].medicneName,"Floxip");
    strcpy(m[9].Company,"Abott");
    strcpy(m[9].info,"Good Medicine for all types of infections");
-
-       test_main();
-       return 0;
+   }
+  test_main();
+   return 0;
 
   do{
 
    printf("Enter\n1 - Purchase Medicine\n2 - Enter Information about a Medicine\n3 - Stock of Medicine in Store\n4 - Medicine Information\n5 - Add Medicine\n6 - Delete a Medicine\n7 - Change Quantity of Medicine\n");
    scanf("%d",&choice);
-
    switch(choice)
    {
     case 1:
     {
-    PurchaseMedicine(number+1);
+     PurchaseMedicine(number+1);
      break;
     }
      case 2:
@@ -129,37 +128,37 @@ int test_main();
      EnterInfoAboutMedicine(number+1);
      break;
     }
-      case 3:
+    case 3:
       {
        StockOfMedicine(number+1);
        break;
       }
-      case 4:
+    case 4:
       {
        KnowInfoAboutMedicine(number+1);
        break;
       }
-      case 5:
+    case 5:
       {
        ++number;
        AddMedicineinStore(number,m);
        break;
       }
-      case 6:
+    case 6:
       {
        DeleteMedicineStore(number+1);
        break;
       }
-      case 7:
+    case 7:
       {
        ChangeMedicineDetails(number+1);
        break;
       }
-
    }
      printf("To Continue with other Options Enter 1 Else any other number\n");
      scanf("%d",&c);
    }while(c==1);
-   }
+
  }
+
 

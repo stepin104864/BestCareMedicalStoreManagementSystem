@@ -5,7 +5,6 @@ void setUp(){}
 /* Required by the unity test framework */
 void tearDown(){}
 
-
 void test_PurchaseMedicine(void)
 {
     TEST_ASSERT(PurchaseMedicine(9));
