@@ -2,6 +2,7 @@
 
 
   //required functions for management system
+ int login();
  int PurchaseMedicine(int number);//medicine to be purchased
  int EnterInfoAboutMedicine(int number);//information about any medicine and editing the information
  int KnowInfoAboutMedicine(int number);//about any medicine
@@ -15,7 +16,7 @@
 int test_main();
  int main(void)
  {
-   int i,j,choice,number=0,c;
+   int i,j,choice, number=0,c;;
    for(i=0;i<100;i++)
    {
     //entering the medicines details
@@ -109,15 +110,20 @@ int test_main();
    strcpy(m[9].Company,"Abott");
    strcpy(m[9].info,"Good Medicine for all types of infections");
    }
-  test_main();
+   test_main();
    return 0;
-
   do{
 
-   printf("Enter\n1 - Purchase Medicine\n2 - Enter Information about a Medicine\n3 - Stock of Medicine in Store\n4 - Medicine Information\n5 - Add Medicine\n6 - Delete a Medicine\n7 - Change Quantity of Medicine\n");
+  printf("Enter\n1 - Purchase Medicine\n2 - Enter Information about a Medicine\n3 - Stock of Medicine in Store\n4 - Medicine Information\n5 - Add Medicine\n6 - Delete a Medicine\n7 - Change Quantity of Medicine\n");
    scanf("%d",&choice);
    switch(choice)
    {
+
+    case 0:
+    {
+     login();
+     break;
+    }
     case 1:
     {
      PurchaseMedicine(number+1);
@@ -158,7 +164,5 @@ int test_main();
      printf("To Continue with other Options Enter 1 Else any other number\n");
      scanf("%d",&c);
    }while(c==1);
-
- }
-
+}
 

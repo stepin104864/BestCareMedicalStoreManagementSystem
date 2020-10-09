@@ -1,14 +1,48 @@
 #include<medicalstoremanagement.h>
 
+//login function
+int login()
+{
+    char username[15];
+    char password[15];
+
+
+    printf("Enter your username:\n");
+    scanf("%s",&username);
+
+    printf("Enter your password:\n");
+    scanf("%s",&password);
+
+
+    if(strcmp(username,"Apurva")==0)
+    {
+        if(strcmp(password,"1234")==0)
+        {
+             printf("\tWelcome.Login Success!!\n");
+             return 1;
+        }
+        else
+        {
+             printf("\nwrong password");
+             return 0;
+        }
+    }
+    else
+    {
+        printf("User doesn't exist\n");
+        return 0;
+    }
+}
 //medicine to be purchased Function
  int PurchaseMedicine(int number)
  {
+
   int id,check,i,quantity,flag=0;
   char name[100];
+  printf("Purchase Medicine\n");
   printf("Enter 1 if you know ID else any other number to enter Name of Medicine\n");
   fflush(stdin);//to flush off the buffer
   scanf("%d",&check);
-
   if(check==1)
   {
    printf("Enter Id to purchase Medicine\n");
@@ -21,7 +55,7 @@
      flag=1;
      int c;
      printf("These are the details of Medicine\n");
-     printf("Name%s\nPrice=%d\nAvailable Quantity=%d\nCompany=%s\nMfg Date=%s\nExp Date=%s\n",m[i].medicneName,m[i].price,m[i].quantity,m[i].Company,m[i].Mfg_Date,m[i].Exp_Date);
+     printf("Name=%s\nPrice=%d\nAvailable Quantity=%d\nCompany=%s\nMfg Date=%s\nExp Date=%s\n",m[i].medicneName,m[i].price,m[i].quantity,m[i].Company,m[i].Mfg_Date,m[i].Exp_Date);
       if(strcmp(m[i].info,"")==0)
       {
        printf("Medicine Review/Info=Not Available\n");
@@ -105,7 +139,7 @@
  {
   int i,flag=0,c,id;
   char name[100],info[100];
-  printf("Enter Id of the medicine you want to Review or include Info\n");
+  printf("EnterInfoAboutMedicine\nEnter Id of the medicine you want to Review or include Info\n");
   fflush(stdin);
   scanf("%d",&id);
   for(i=0;i<number;i++)
@@ -148,7 +182,7 @@
  {
    int i,flag=0;
    char name[100];
-  printf("Enter Name of the medicine you want to see Review and Info\n");
+  printf("KnowInfoAboutMedicine\nEnter Name of the medicine you want to see Review and Info\n");
   fflush(stdin);
   gets(name);
   for(i=0;i<number;i++)
@@ -176,9 +210,12 @@
 
  //stock of the medicine function
  int StockOfMedicine(int number){
-  int i;
+  int i,b=1;
   if(number!=0)
   {
+      printf("StockOfMedicine\n");
+      printf("Enter 1 to know about the stock of medicine in store\n");
+      scanf("%d",&b);
       printf("All Available Items are\n");
    for(i=0;i<number;i++)
    {
@@ -203,6 +240,7 @@
  // function for adding a new medicine
  int AddMedicineinStore(int number,struct Medicine m[])
  {
+  printf("AddMedicineinStore\n");
   char name[100];
   printf("Enter Medicine Id\n");
   scanf("%d",&(m[number].id));
@@ -233,6 +271,7 @@
  //function for deleting a medicine from store
 int DeleteMedicineStore(int number)
  {
+  printf("DeleteMedicineStore\n");
   int id,i,flag=0,num;
   printf("Enter Id to be deleted\n");
   fflush(stdin);
@@ -263,6 +302,7 @@ int DeleteMedicineStore(int number)
  //function for changing any details of medicine
  int ChangeMedicineDetails(int number)
  {
+  printf("ChangeMedicineDetails\n");
   int id,quantity,choice,c,i;
   printf("Enter id to change Details\n");
   scanf("%d",&id);

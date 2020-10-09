@@ -21,6 +21,8 @@ struct Medicine
    char medicneName[100],Company[100],Mfg_Date[11],Exp_Date[11],info[5000];
   }m[100];
 
+
+int login();
 //all the functions of the system
 /**
 *  medicine to be purchased
