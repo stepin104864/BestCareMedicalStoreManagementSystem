@@ -22,7 +22,6 @@ struct Medicine
   }m[100];
 
 
-int login();
 //all the functions of the system
 /**
 *  medicine to be purchased

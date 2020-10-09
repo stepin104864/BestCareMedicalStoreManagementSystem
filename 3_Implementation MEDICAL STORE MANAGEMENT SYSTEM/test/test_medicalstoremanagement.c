@@ -5,10 +5,7 @@ void setUp(){}
 /* Required by the unity test framework */
 void tearDown(){}
 
-void test_login(void)
-{
-    TEST_ASSERT(login());
-}
+
 void test_PurchaseMedicine(void)
 {
     TEST_ASSERT(PurchaseMedicine(9));
@@ -45,7 +42,7 @@ int  test_main(void)
   UNITY_BEGIN();
 
 /* Run Test functions */
-  RUN_TEST(test_login);
+
   RUN_TEST(test_PurchaseMedicine);
   RUN_TEST(test_EnterInfoAboutMedicine);
   RUN_TEST(test_KnowInfoAboutMedicine);

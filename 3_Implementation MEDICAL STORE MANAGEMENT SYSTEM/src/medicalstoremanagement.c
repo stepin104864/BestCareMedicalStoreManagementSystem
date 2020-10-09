@@ -1,38 +1,5 @@
 #include<medicalstoremanagement.h>
 
-//login function
-int login()
-{
-    char username[15];
-    char password[15];
-
-
-    printf("Enter your username:\n");
-    scanf("%s",&username);
-
-    printf("Enter your password:\n");
-    scanf("%s",&password);
-
-
-    if(strcmp(username,"Apurva")==0)
-    {
-        if(strcmp(password,"1234")==0)
-        {
-             printf("\tWelcome.Login Success!!\n");
-             return 1;
-        }
-        else
-        {
-             printf("\nwrong password");
-             return 0;
-        }
-    }
-    else
-    {
-        printf("User doesn't exist\n");
-        return 0;
-    }
-}
 //medicine to be purchased Function
  int PurchaseMedicine(int number)
  {

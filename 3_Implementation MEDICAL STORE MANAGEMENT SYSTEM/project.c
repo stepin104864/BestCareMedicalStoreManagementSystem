@@ -2,7 +2,6 @@
 
 
   //required functions for management system
- int login();
  int PurchaseMedicine(int number);//medicine to be purchased
  int EnterInfoAboutMedicine(int number);//information about any medicine and editing the information
  int KnowInfoAboutMedicine(int number);//about any medicine
@@ -118,12 +117,6 @@ int test_main();
    scanf("%d",&choice);
    switch(choice)
    {
-
-    case 0:
-    {
-     login();
-     break;
-    }
     case 1:
     {
      PurchaseMedicine(number+1);
