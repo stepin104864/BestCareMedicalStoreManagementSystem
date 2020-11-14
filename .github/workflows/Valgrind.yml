@@ -19,5 +19,5 @@ jobs:
         sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
     - name: make test
       run: |
-        make test -C /3_Implementation MEDICAL STORE MANAGEMENT SYSTEM/
-        valgrind ./3_Implementation MEDICAL STORE MANAGEMENT SYSTEM/build/Test_MEDICALSTOREMANAGEMENTSYSTEM.out
+        make test -C /3_Implementation MEDICAL STORE MANAGEMENT SYSTEM /
+        valgrind ./3_Implementation MEDICAL STORE MANAGEMENT SYSTEM /build/Test_MEDICALSTOREMANAGEMENTSYSTEM.out
