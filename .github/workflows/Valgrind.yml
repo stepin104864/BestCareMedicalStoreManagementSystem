@@ -2,9 +2,9 @@ name: Valgrind
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
       run: |
         sudo apt-get install valgrind
         sudo apt-get install unity
-    - name: make run
+    - name: make test
       run: |
-        make run -C 3_Implementation
-        valgrind ./3_Implementation/build/MEDICALSTOREMANAGEMENTSYSTEM.out
+        make test -C 3_Implementation
+        valgrind ./3_Implementation/build/Test_MEDICALSTOREMANAGEMENTSYSTEM.out
