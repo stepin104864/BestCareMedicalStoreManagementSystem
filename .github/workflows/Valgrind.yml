@@ -17,7 +17,7 @@ jobs:
       run: |
         sudo apt-get install valgrind
         sudo apt-get install unity
-    - name: make test
+    - name: make run
       run: |
-        make test 3_Implementation
+        make run -C 3_Implementation
         valgrind ./3_Implementation/build/Test_MEDICALSTOREMANAGEMENTSYSTEM.out
