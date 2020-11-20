@@ -1,44 +1,19 @@
 name: Unit testing
 
 on:
-  pull_request: {}
-  push: { branches: [main] }
-
-env:
-  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  pull_request:
+   branches: [ main ]
+  push: 
+   branches: [ main ] 
 
 jobs:
-  testAllModes:
-    name: Test in ${{ matrix.testMode }} on version ${{ matrix.unityVersion }}
+  build:
+  
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        projectPath:
-          - 3_Implementation
-        unityVersion:
-          - 2019.2.11f1
-        testMode:
-          - playmode
-          - editmode
+    
     steps:
       - uses: actions/checkout@v2
-        with:
-          lfs: true
-      - uses: actions/cache@v1.1.0
-        with:
-          path: ${{ matrix.projectPath }}/Library
-          key: Library-${{ matrix.projectPath }}
-          restore-keys: |
-            Library-
-      - uses: webbertakken/unity-test-runner@v1.4
-        id: tests
-        with:
-          projectPath: ${{ matrix.projectPath }}
-          unityVersion: ${{ matrix.unityVersion }}
-          testMode: ${{ matrix.testMode }}
-          artifactsPath: ${{ matrix.testMode }}-artifacts
-      - uses: actions/upload-artifact@v1
-        with:
-          name: Test results for ${{ matrix.testMode }}
-          path: ${{ steps.tests.outputs.artifactsPath }}
+      - name: Install Unity
+        run: sudo apt-get -y install libunity libunity-doc libunity_internals-doc
+      - name: make test
+        run: make test -C 3_Implementation 
