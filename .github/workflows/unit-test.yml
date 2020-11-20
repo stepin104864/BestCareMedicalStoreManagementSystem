@@ -13,7 +13,8 @@ jobs:
     
     steps:
       - uses: actions/checkout@v2
-      - name: Install Unity
-        run: sudo apt-get -y install libunity libunity-doc libunity_internals-doc
-      - name: make test
-        run: make test -C 3_Implementation 
+      - name: Run tests
+        uses: webbertakken/unity-test-runner@v1.3
+        with:
+          projectPath: 3_Implementation
+          unityVersion: 2019.2.11f1
