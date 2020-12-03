@@ -12,10 +12,10 @@
 
  //main function
 
-int test_main();
+
  int main(void)
  {
-   int i,j,choice, number=0,c;;
+   int i,j, number=0,c;;
    for(i=0;i<100;i++)
    {
     //entering the medicines details
@@ -109,51 +109,46 @@ int test_main();
    strcpy(m[9].Company,"Abott");
    strcpy(m[9].info,"Good Medicine for all types of infections");
    }
-   test_main();
-   return 0;
+  int choiceofopeartion(int choice)
+  {
   do{
-
   printf("Enter\n1 - Purchase Medicine\n2 - Enter Information about a Medicine\n3 - Stock of Medicine in Store\n4 - Medicine Information\n5 - Add Medicine\n6 - Delete a Medicine\n7 - Change Quantity of Medicine\n");
    scanf("%d",&choice);
-   switch(choice)
+   if(choice==1)
    {
-    case 1:
-    {
      PurchaseMedicine(number+1);
-     break;
     }
-     case 2:
+     else if(choice==2)
     {
      EnterInfoAboutMedicine(number+1);
-     break;
     }
-    case 3:
+    else if(choice==3)
       {
        StockOfMedicine(number+1);
-       break;
+       
       }
-    case 4:
+    elseif(choice==4)
       {
        KnowInfoAboutMedicine(number+1);
-       break;
+       
       }
-    case 5:
+    elseif(choice==5)
       {
        ++number;
        AddMedicineinStore(number,m);
-       break;
+       
       }
-    case 6:
+    elseif(choice==6)
       {
        DeleteMedicineStore(number+1);
-       break;
+       
       }
-    case 7:
+    else if(choice==7)
       {
        ChangeMedicineDetails(number+1);
-       break;
+       
       }
-   }
+  } 
      printf("To Continue with other Options Enter 1 Else any other number\n");
      scanf("%d",&c);
    }while(c==1);
